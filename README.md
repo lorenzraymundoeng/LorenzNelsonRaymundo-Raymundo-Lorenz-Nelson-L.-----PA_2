@@ -25,9 +25,9 @@ The key steps are:
 
 ## How to Run
 
-To run the notebook, you need to have **Python** and **Jupyter Notebook** installed.
+To run the notebook, you need to have **Anaconda Navigator** installed and open **Jupyter Notebook**.
 
-1.  Clone this repository or download the `PA2.ipynb` file.
+1.  Download the `PA2.ipynb` file.
 2.  Start the Jupyter Notebook server:
     ```bash
     jupyter notebook
