@@ -28,13 +28,8 @@ The key steps are:
 To run the notebook, you need to have **Python** and **Jupyter Notebook** installed.
 
 1.  Clone this repository or download the `PA2.ipynb` file.
-2.  Make sure you have the required libraries installed:
-    ```bash
-    pip install numpy jupyter
-    ```
-3.  Open a terminal or command prompt and navigate to the directory where the file is located.
-4.  Start the Jupyter Notebook server:
+2.  Start the Jupyter Notebook server:
     ```bash
     jupyter notebook
     ```
-5.  Your web browser will open, and you can click on `PA2.ipynb` to open and run the notebook.
+3.  Your web browser will open, upload `PA2.ipynb`, and then click on `PA2.ipynb` to open and run the notebook.
