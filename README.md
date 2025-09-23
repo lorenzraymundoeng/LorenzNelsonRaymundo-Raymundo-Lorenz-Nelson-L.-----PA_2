@@ -8,7 +8,7 @@ import numpy as np
 ```
 #### Part 1: Normalization
 
-The first exercise in this programming assignment (PA) shows how to perform **Z-score normalization** on a randomly generated 5x5 NumPy array.\
+The first exercise in this programming assignment shows how to perform **Z-score normalization** on a randomly generated 5x5 NumPy array.\
 To do this, we must first create a 5x5 array.
 ```Python
 x = np.random.random([5,5])
@@ -26,30 +26,70 @@ norm_x = (x-mean)/sd
 # to display,
 print(norm_x)
 ```
-Lastly, according to the instructions, we must save this Normalized array as `X_normalized.npy`\
+Lastly, we must save this Normalized array as `X_normalized.npy`\
 To do this, we type in 
 ```Python
 np.save('X_normalized.npy, norm_x)
 
-# for displaying purposes,
+# for viewing purposes,
 print("\n\n Normalized ndarray saved to 'X_normalized.npy'")
 ```
 
-## Exercise 2: Divisible by 3
+#### Part 2: Divisible by 3
 
-This section demonstrates how to manipulate and filter a 10x10 NumPy array.
+The second exercise in this programming assignment demonstrates how to manipulate and filter a 10x10 NumPy array.\
+We know that a 10x10 array must contain 100 elements. To do this, we use the .arange() function to create an evenly spaced array.
+```Python
+# With 1 (inclusive) and 101 (exclusive), this is an array that will contain values 1 to 100.
+x = np.arange(1,101)
+# Since this is still not arranged as a 10x10 array, we use the .reshape() function
+x_1 = x.reshape(10,10)
 
-The key steps are:
-1.  A 10x10 array `x_1` is created, containing the integers from 1 to 100.
-2.  A second array `x_2` is created by squaring each element of `x_1`.
-3.  Elements from `x_1` that are divisible by 3 are filtered and stored in a new array, `orig_by_3`.
-4.  Elements from `x_2` that are divisible by 3 are filtered and stored in a new array, `squared_by_3`.
-5.  Finally, the arrays `orig_by_3` and `squared_by_3` are saved together in a single file named `div_by_3.npy`.
+# For viewing purposes,
+print("Original Array:\n" , x_1)
+```
+According to the instructions, we need to create a 10x10 array of the SQUARES of the first 100 positive integers, and then find out which values are divisible by 3. \
+To do this we must first square all the values inside array x_1,
+```Python
+x_2 = x_1**2 #This squares all of the values inside array x_1
 
-## How to Run
+#For viewing purposes,
+print(\n Array with squared values:\n" , x_2)
+```
+Before finding all of the squared values that are divisible by three, it would be fun to also know which of the original values are divisible by 3.\
+To do this, 
+```Python
+orig_by_3 = x[x % 3 == 0] # Modulo returns the remainder of a number when divided by a certain number x (in this case, 3). If the remainder is zero, then it means that the number is divisible by 3.
+x_3 = orig_by_3.reshape(3,11) # This step is not necessary. But, knowing that from 1 to 100, there are 33 numbers that are divisible by 3. We can reshape the array to a 3x11 array to make it look more presentable
 
-To run the notebook, you need to have **Anaconda Navigator** installed and open **Jupyter Notebook**.
+# For viewing purposes,
+print("\n Original elements divisible by 3:\n" , x_3)
+```
 
+Similarly, we can use the same code to find the squared values that are divisible by 3. But of course, we must change x to x_2.
+```Python
+squared_by_3 = x[x_2 % 3 == 0] # Modulo returns the remainder of a number when divided by a certain number x (in this case, 3). If the remainder is zero, then it means that the number is divisible by 3.
+x_4 = squared_by_3.reshape(3,11) # This step is not necessary. But, knowing that from 1 to 100, there are 33 numbers that are divisible by 3, then, there should still be 33 numbers that are divisible by 3 when squared
+
+# To display,
+print("\n Squared elements divisible by 3:\n" , x_4)
+```
+Lastly, we must save the elements divisible by 3 to `div_by_3.npy`\
+To do this,
+```Python
+np.save('div_by_3.npy', x_3, x_4)
+
+# For viewing purposes,
+print("\n\n Elements divisible by 3 saved to 'div_by_3.npy'")
+```
+
+#### Pre-requisites
+- Python 3.0 or later
+
+#### Installation
+These codes were created on Jupyter Notebook. Make sure to install Anaconda Navigator and access Jupyter Notebook. It's all for free! Alternatively, you could use VS Code to run the code.
+
+#### How to Run
 1.  Download the `PA2.ipynb` file.
 2.  Start the Jupyter Notebook server:
     ```bash
