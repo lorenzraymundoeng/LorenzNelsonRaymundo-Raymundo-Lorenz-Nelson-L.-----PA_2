@@ -92,7 +92,4 @@ These codes were created on Jupyter Notebook. Make sure to install Anaconda Navi
 #### How to Run
 1.  Download the `PA2.ipynb` file.
 2.  Start the Jupyter Notebook server:
-    ```bash
-    jupyter notebook
-    ```
 3.  Your web browser will open, upload `PA2.ipynb`, and then click on `PA2.ipynb` to open and run the notebook.
