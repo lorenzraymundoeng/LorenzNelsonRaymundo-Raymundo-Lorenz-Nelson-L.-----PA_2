@@ -9,7 +9,7 @@ import numpy as np
 #### Part 1: Normalization
 
 The first exercise in this programming assignment (PA) shows how to perform **Z-score normalization** on a randomly generated 5x5 NumPy array.
-To do this, we must first create a 5x5 array.
+\nTo do this, we must first create a 5x5 array.
 ```Python
 x = np.random.random([5,5])
 ```
