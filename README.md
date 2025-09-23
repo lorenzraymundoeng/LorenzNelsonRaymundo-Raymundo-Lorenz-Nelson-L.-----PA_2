@@ -7,13 +7,12 @@ Before we proceed, remember to import the numpy library to your notebook. This i
 import numpy as np
 ```
 #### Part 1: Normalization
-
 The first exercise in this programming assignment shows how to perform **Z-score normalization** on a randomly generated 5x5 NumPy array.\
 To do this, we must first create a 5x5 array.
 ```Python
 x = np.random.random([5,5])
 ```
-Now, knowing that the formula for Z-score normalization is ** (X-μ)/σ ** where μ is the mean and σ is the standard deviation.\
+Now, knowing that the formula for Z-score normalization is ** (X-μ)/σ **, where μ is the mean and σ is the standard deviation.\
 To get the mean and the standard deviation, we can use a numpy function .mean() and .std()
 ```Python
 mean = x.mean()
@@ -36,7 +35,6 @@ print("\n\n Normalized ndarray saved to 'X_normalized.npy'")
 ```
 
 #### Part 2: Divisible by 3
-
 The second exercise in this programming assignment demonstrates how to manipulate and filter a 10x10 NumPy array.\
 We know that a 10x10 array must contain 100 elements. To do this, we use the .arange() function to create an evenly spaced array.
 ```Python
