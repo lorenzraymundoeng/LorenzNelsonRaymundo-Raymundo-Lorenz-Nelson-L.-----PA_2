@@ -8,13 +8,32 @@ import numpy as np
 ```
 #### Part 1: Normalization
 
-This section of the notebook shows how to perform **Z-score normalization** on a randomly generated 5x5 NumPy array.
+The first exercise in this programming assignment (PA) shows how to perform **Z-score normalization** on a randomly generated 5x5 NumPy array.
+To do this, we must first create a 5x5 array.
+```Python
+x = np.random.random([5,5])
+```
+Now, knowing that the formula for Z-score normalization is ** (X-μ)/σ ** where μ is the mean and σ is the standard deviation.
+To get the mean and the standard deviation, we can use a numpy function .mean() and .std()
+```Python
+mean = x.mean()
+sd = x.std()
+```
+To get the Z-score normalization, we use the formula ** (X-μ)/σ **. Since μ is mean and σ is sd,
+```Python
+norm_x = (x-mean)/sd
 
-The process involves these steps:
-1.  A 5x5 array `x` is created with random values.
-2.  The mean (`mean`) and standard deviation (`sd`) of the array are calculated.
-3.  Each element in the array is normalized using the formula `z = (x - mean) / sd`.
-4.  The normalized array is then saved to a file named `X_normalized.npy`.
+# to display,
+print(norm_x)
+```
+Lastly, according to the instructions, we must save this Normalized array as `X_normalized.npy`
+To do this, we type in 
+```Python
+np.save('X_normalized.npy, norm_x)
+
+# for displaying purposes,
+print("\n\n Normalized ndarray saved to 'X_normalized.npy'")
+```
 
 ## Exercise 2: Divisible by 3
 
