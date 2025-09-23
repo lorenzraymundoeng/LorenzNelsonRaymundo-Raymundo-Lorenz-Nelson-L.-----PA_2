@@ -13,7 +13,7 @@ To do this, we must first create a 5x5 array.
 ```Python
 x = np.random.random([5,5])
 ```
-Now, knowing that the formula for Z-score normalization is ** (X-μ)/σ ** where μ is the mean and σ is the standard deviation.
+Now, knowing that the formula for Z-score normalization is ** (X-μ)/σ ** where μ is the mean and σ is the standard deviation.\
 To get the mean and the standard deviation, we can use a numpy function .mean() and .std()
 ```Python
 mean = x.mean()
@@ -26,7 +26,7 @@ norm_x = (x-mean)/sd
 # to display,
 print(norm_x)
 ```
-Lastly, according to the instructions, we must save this Normalized array as `X_normalized.npy`
+Lastly, according to the instructions, we must save this Normalized array as `X_normalized.npy`\
 To do this, we type in 
 ```Python
 np.save('X_normalized.npy, norm_x)
