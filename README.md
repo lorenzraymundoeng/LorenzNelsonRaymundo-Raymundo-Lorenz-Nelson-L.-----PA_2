@@ -1,8 +1,12 @@
-# Programming Assignment 2
-
+# Programming Assignment 2 | Raymundo, Lorenz Nelson L.
+#### This is my submission for PA2 (Experiment 2 | Numerical Python)
 This repository contains a Jupyter Notebook (`PA2.ipynb`) that demonstrates two programming exercises using the **NumPy** library.
 
-## Exercise 1: Normalization
+Before we proceed, remember to import the numpy library to your notebook. This is a very important step because it will let you access all NumPy functions.
+```Python
+import numpy as np
+```
+#### Part 1: Normalization
 
 This section of the notebook shows how to perform **Z-score normalization** on a randomly generated 5x5 NumPy array.
 
